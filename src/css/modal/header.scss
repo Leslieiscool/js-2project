@@ -1,0 +1,163 @@
+header{
+    width: 100%;
+    height: 134px;
+    .header-top{
+        width:100%;
+        height: 34px;
+        background: #e5e5e5;
+        padding: 11px;
+        position: relative;
+        &-content{
+            height: 12px;
+            width: 100%;
+            text-align: center;
+            font-size: 12px;
+            font-weight: bold;
+            font-family: Gotham,Verdana,sans-serif;
+        }
+        &-cancel{
+            position: absolute;
+            right: 11px;
+            top: 11px;
+            width: 22px;
+            height: 12px;
+            a{
+                font-size: 12px !important;
+                color: #848484;
+                display: block;
+                margin-left: 10px;
+            }
+        }
+    }
+    .header-bottom{
+        height: 100px;
+        width: 100%;
+        
+        &-box{
+            height: 100%;
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            margin: 0 auto;
+            &-logo{
+                height: 77px;
+                width: 120px;
+                margin: 0px 60px 0px 30px;
+                text-align:center;
+                a{
+                    width: 77px;
+                    height: 77px;
+                    img{
+                        width: 77px;
+                        height: 77px;
+                    }
+                }
+                
+            }
+            &-nav{
+                flex: 1;
+                .header-search{
+                    float: right;
+                    margin-right: 40px;
+                    height: 40px;
+                    display: flex;
+                    padding-top: 15px;
+                    display: flex;
+                    justify-content: space-between;
+                    
+                    .test{
+                        position: relative;
+                        margin-right: 25px;
+                        .search-box{
+                        width: 300px;
+                        font-family: Gotham,Verdana,sans-serif;
+                        background: #eee;
+                        border-radius: 30px;
+                        display: flex;
+                        justify-content: space-between;
+                        height: 25px;
+                        input{
+                            flex: 1;
+                            height: 22px;
+                            margin: 1px 4px 1px 10px;
+                            border: none;
+                            font: 400 13.3333px Arial;
+                            color: #757575;
+                            background-color: #eee;
+                            outline: none;
+                            padding-left: 10px;
+                        }
+                        button{
+                            margin: 0 10px;
+                            font-size: 21px !important;
+                            height: 25px;
+                            border: none;
+                            padding: 0;
+                            color: #c2c2c2;
+                            background:#eee;
+                            cursor: pointer;
+                        }
+                        .uplist{
+                            width: 100%;
+                            height: 180px;
+                            background: #eee;
+                            position: absolute;
+                            top:26px;
+                            z-index: 100;
+                            display: none;
+                            font-weight: 400;
+                            p{
+                                height: 20px;
+                                margin: 10px 20px;
+                                color: #6e6e6e;
+                                
+                                font-size: 18px;
+                            }
+                            ul{
+                                height: 200px;
+                                li{
+                                    font-size: 16px;
+                                    a{
+                                        color: #757575;
+                                        font-size: 14px;
+                                        display: block;
+                                        height: 25px;
+                                        margin: 10px 20px;
+                                        overflow: hidden;
+                                        white-space: nowrap;
+                                        text-overflow: ellipsis;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    
+                    }
+                    a{
+                        color: #fff;
+                        line-height: 25px;
+                        display: block;
+
+                    }
+                }
+                .header-navbar{
+                    width: 100%;
+                    height: 60px;
+                    &-items{
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: flex-start;
+                        a{
+                            font-size: 12px;
+                            color: #fff;
+                            display: block;
+                            padding: 22px 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,264 @@
+@import './reset.scss';
+@import './modal/header.scss';
+@import './modal/footer.scss';
+
+//main
+// .header-bottom{
+//     background: #191919;
+// }
+main{
+    width: 100%;
+    background: #60e3ad;
+    .hot{
+        height: 508px;
+        width: 100%;
+        background: #d9d9d9;
+        overflow: hidden;
+        h1{
+            height: 38px;
+            line-height: 38px;
+            margin: 20px 30px;
+            font-size: 32px;
+            letter-spacing: 8px;
+            font-family: Gotham,Verdana,sans-serif;
+        }
+        &-goodslist{
+            width: 100%;
+            height: 430px;
+            display: flex;
+            &-goodsitem{
+                width: 25%;
+                height: 100%;
+                font-family: Gotham,Verdana,sans-serif;
+                &-box{
+                    max-width: 360px;
+                    min-width: 270px;
+                    margin: 0 auto;
+                    padding: 20px;
+                    position: relative;
+                    height: 100%;
+                    &-pic{
+                        width: 200px;
+                        height: 170px;
+                        margin: 0 auto;
+                        position: absolute;
+                        z-index: 5;
+                        left: 0;
+                        right: 0;
+                        transition: .5s;
+                        img{
+                            padding: 0 10px;
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                    &-shade{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        z-index: 4;
+                        background: #999;
+                        display: none;
+                        padding: 20px;
+                        &-info{
+                            width: 100%;
+                            position: absolute;
+                            bottom: 120px;
+                            .good-title{
+                                height: 15px;
+                                line-height: 15px;
+                                font-size: 14px;
+                                font-weight: 700;
+                                color: #fff;
+                                margin: 20px 0;
+                            }
+                            .gd-p{
+                                font-size: 12px;
+                                color: #000;
+                                .good-price{
+                                color: #242424;
+                                }
+                            }
+                        }
+                    }
+                    &-btn{
+                        position: absolute;
+                        z-index: 6;
+                        top: 122px;
+                        left: 0;
+                        right: 0;
+                        display: none;
+                        .whitebtn{
+                            background: #fff;
+                            display: block;
+                            width: 130px;
+                            height: 40px;
+                            border-radius: 20px;
+                            line-height: 40px;
+                            color: #000;
+                            text-align: center;
+                            margin: 10px auto;
+                        }
+                        .blackbtn{
+                            @extend .whitebtn;
+                            color: #fff;
+                            background: #000;
+                        }
+                    }
+                    &-info{
+                         width: calc(100%-40px);
+                         height: 195px;
+                         padding-top: 20px;
+                         position: absolute;
+                         z-index: 3;
+                         top: 190px;
+                         a{
+                             color: #d9d9d9;
+                         }
+                        .good-title{
+                            height: 15px;
+                            line-height: 15px;
+                            font-size: 14px;
+                            font-weight: 700;
+                            color: #000;
+                        }
+                        .gd-p{
+                            font-size: 12px;
+                            color: #999;
+                            margin: 10px 0;
+                            .good-price{
+                                color: #242424;
+                            }
+                        }
+                        .good-adv{
+                            font-size: 12px;
+                            color: #000;
+                            margin: 15px 0 10px;
+                        }
+                        .good-color{
+                            height: 13px;
+                            margin-bottom: 10px;
+                            padding: 1px;
+                            li{
+                                height: 10px;
+                                width: 12px;
+                                background: #000;
+                            }
+                        }
+                        .good-icons{
+                            background: #60e3ad;
+                            height: 25px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .story{
+        height: 700px;
+        width: 100%;
+        position: relative;
+        .storyinfo{
+            width: 600px;
+            height: 260px;
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            h1{
+                text-align: center;
+                line-height: 53px;
+                margin: 20px 30px;
+                font-family: Gotham,Verdana,sans-serif;
+                font-style: normal;
+                font-weight: 700;
+                font-size: 48px;
+                letter-spacing: 12px;
+            }
+            h2{
+                text-align: center;
+                font-size: 24px;
+                line-height: 31px;
+                letter-spacing: 2px;
+                font-family: Gotham,Verdana,sans-serif;
+                font-style: normal;
+                font-weight: 700;
+                margin-bottom: 15px;
+            }
+            a{
+                color: #242424;
+                font-size: 12px;
+                font-weight: 700;
+                width: 128px;
+                height: 36px;
+                border: 1px solid #242424;
+                border-radius: 25px;
+                background: #fff;
+                line-height: 36px;
+                text-align: center;
+            }
+        }
+        .whiteword{
+            color: #fff;
+        }
+    }
+
+    .story:nth-of-type(1){
+        background: url(/images/1.jpeg) no-repeat center;
+        background-size: cover;
+        .storyinfo{
+            left: 2%;
+            top: 52%;
+        }
+    }
+    .story:nth-of-type(3){
+        background: url(/images/2.jpeg) no-repeat center;
+        background-size: cover;
+        .storyinfo{
+            left: 2%;
+            top: 52%;
+        }
+    }
+    .story:nth-of-type(4){
+        background: url(/images/3.jpeg) no-repeat center;
+        background-size: cover;
+        .storyinfo{
+            right: 4%;
+            top: 22%;
+        }
+    }
+    .story:nth-of-type(5){
+        background: url(/images/4.jpeg) no-repeat center;
+        background-size: cover;
+        .storyinfo{
+            right: 1%;
+            top: 15%;
+        }
+    }
+    .story:nth-of-type(6){
+        background: url(/images/5.jpeg) no-repeat center;
+        background-size: cover;
+        .storyinfo{
+            left: 2%;
+            top: 52%;
+        }
+    }
+    .story:nth-of-type(7){
+        background: url(/images/7.png) no-repeat center;
+        background-size: cover;
+        .storyinfo{
+            right: 1%;
+            top: 35%;
+        }
+    }
+    .story:nth-of-type(8){
+        background: url(/images/8.jpeg) no-repeat center;
+        background-size: cover;
+        .storyinfo{
+            right: 1%;
+            top: 35%;
+        }
+    }
+}
