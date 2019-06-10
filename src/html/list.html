@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/list.css">
+    <link rel="stylesheet" href="/libs/font-icon/iconfont.css">
+</head>
+<body>
+    <header></header>
+    <main>
+        <div class="banner">
+            <div class="banner-text">
+                <p>选购所有</p>
+                <h1>耳机</h1>
+            </div>
+        </div>
+        <div class="goodsbox">
+            <div class="goodsbox-left">
+                <h1><span>12</span> 产品</h1>
+                <div class="goodsclass">
+                    <div class="good-type">
+                        <h4>适合</h4>
+                        <div ><input type="radio" name="type"><span>入耳式</span></div>
+                        <div ><input type="radio" name="type"><span>头戴</span></div>
+                    </div>
+                    <div class="good-function">
+                        <h4>功能</h4>
+                        <div ><input type="checkbox"><span>无线</span></div>
+                        <div ><input type="checkbox"><span>运动</span></div>
+                        <div ><input type="checkbox"><span>心率传感器</span></div>
+                    </div>
+                    <div class="good-sort">
+                        <h4>分类</h4>
+                        <div ><input type="radio" name="sort"><span>按照类别排列</span></div>
+                        <div ><input type="radio" name="sort"><span>按照评价最高排列</span></div>
+                        <div ><input type="radio" name="sort"><span>按照价格由低到高排列</span></div>
+                        <div ><input type="radio" name="sort"><span>按照价格由高到低排列</span></div>
+                    </div>
+                    <div class="clear">
+                        <a href="" class="clearbtn">清除所有</a>
+                    </div>
+                    <hr>
+                    <a href="" class="more-goods">查看所有耳机配件</a>
+                </div>
+            </div>
+            <div class="goodsbox-right">
+                <div class="goodsbox-right-box" id="right-box"></div>
+                <script type="text/html" id="list-template">
+                    {{each list item}}
+                    <div class="goodsitem" >
+                        <div class="goodsitem-box" id="hot-items">
+                            <div class="goodsitem-box-pic" id="hot-pic">
+                                <a href="javascript:;"><img src="/images/good-2.png" alt="pic"></a>
+                            </div>
+                            <div class="goodsitem-box-shade" id="hot-shade">
+                                <div class="goodsitem-box-shade-info">
+                                    <a href=""><h2 class="good-title"> {{item.gdtitle}} </h2></a>
+                                    <p class="gd-p">零售价￥<span class="good-price">{{item.gdprice}}</span></p>
+                                </div>
+                            </div>
+                            <div class="goodsitem-box-btn" id="hot-btn">
+                                <a href="javascript:;" class="whitebtn">细节</a>
+                                <a href="javascript:;" class="blackbtn">购买</a>
+                            </div>
+                            <div class="goodsitem-box-info">
+                                <a href=""><h2 class="good-title"> {{item.gdtitle}} </h2></a>
+                                <p class="gd-p">零售价￥<span class="good-price">{{item.gdprice}}</span></p>
+                                <p class="good-adv">{{item.gdadv}}</p>
+                                <ul class="good-color">
+                                    <li></li>
+                                </ul>
+                                <div class="good-icons"></div>
+                            </div>
+                        </div>
+                    </div>
+                    {{/each}}
+                </script>
+                
+            </div>
+        </div>
+    </main>
+    <footer></footer>
+</body>
+<script src="/libs/require/require.min.js" data-main="/js/list.js"></script>
+</html>

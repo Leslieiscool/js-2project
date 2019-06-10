@@ -8,7 +8,7 @@ define(['jquery'], ()=>{
         }
         ftInit(){
             return new Promise(resolve=>{
-                this.footer.load('./html/modal/footer.html', ()=>{
+                this.footer.load('/html/modal/footer.html', ()=>{
                     resolve();
                 })
             })

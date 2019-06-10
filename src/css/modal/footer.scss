@@ -4,6 +4,8 @@ footer{
     background: #0d0d0d;
     .footer-container{
         width: 100%;
+        max-width: 1280px;
+        margin: 0 auto;
         &-part1{
             height: 96px;
             background: #191919;
@@ -23,6 +25,9 @@ footer{
                     margin-right: 24px;
                     font-size: 36px !important;
                 }
+                a:hover{
+                    color: #fff;
+                }
             }
             &-right{
                 width: 58%;
@@ -37,8 +42,12 @@ footer{
                     display: flex;
                     span{
                         font-size: 13px;
-                        padding: 7px 10px 6px 42px;
+                        padding: 7px 10px 6px 20px;
                     }
+                }
+                a:hover{
+                    color: #fff;
+                    text-decoration: underline;
                 }
             }
         }
@@ -59,6 +68,10 @@ footer{
                         font-weight: 600;
                         display: block;
                         height: 15px;
+                    }
+                    a:hover{
+                        color: #fff;
+                        text-decoration: underline;
                     }
                 }
             }
@@ -99,6 +112,9 @@ footer{
                     color: #8c8c8c;
                     font-weight: 300;
                 }
+                .changeCountry:hover{
+                    color: #fff;
+                }
             }
             &-otherInfor{
                 width: 50%;
@@ -111,6 +127,9 @@ footer{
                     color: #595959;
                     font-size: 16px;
                     font-family: Gotham,Verdana,sans-serif;
+                }
+                a:nth-child(1):hover{
+                    color: #fff;
                 }
                 a:nth-child(2){
                     height: 54px;

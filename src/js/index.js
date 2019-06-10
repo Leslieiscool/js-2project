@@ -1,9 +1,10 @@
 require(['./config'], ()=>{
-    require(['template', 'url','header','footer'], (template, url, header)=>{
+    require(['template', 'url','header','footer'], (template, url, header,footer)=>{
         class Index{
             constructor(){
                 
                 this.hot();
+                this.moreBtn();
             }
             
             hot(){
@@ -26,9 +27,8 @@ require(['./config'], ()=>{
             //hot交互
             hotShade(){
                 $('#list-box').on('mouseenter','#hot-items', function(){
-                    console.log(1);
                     $(this).children('#hot-pic').show().css({transform:"scale(1.2)"});
-                    console.log($(this).children('#hot-pic'));
+                    // console.log($(this).children('#hot-pic'));
                     $(this).children('#hot-shade').show();
                     $(this).children('#hot-btn').show();
                 }).on('mouseleave','#hot-items', function(){
@@ -36,6 +36,19 @@ require(['./config'], ()=>{
                     $(this).children('#hot-shade').hide();
                     $(this).children('#hot-btn').hide();
                 })
+            }
+
+            //more btn 背景切换
+            moreBtn(){
+                // console.log($('.whiteword').children('a')[0]);
+                $('.storyinfo').children('a').hover(
+                    function(){
+                    $(this).css({'background': 'black', 'color': 'white'})
+                },function(){
+                    $(this).css({'background': 'white', 'color': 'black'})
+                }
+                )
+                
             }
         }
          new Index();
