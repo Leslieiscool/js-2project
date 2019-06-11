@@ -13,6 +13,7 @@ define(['jquery'], ()=>{
                 this.searchBox();
                 this.navBar();
                 this.cancel();
+                this.logReg();
             })
         }
         hdInit(){
@@ -55,6 +56,10 @@ define(['jquery'], ()=>{
             $('.icon-delete').on('click', function(){
                 $('.header-top').hide()
             })
+        }
+        //登录和注册弹框
+        logReg(){
+            
         }
         
     }

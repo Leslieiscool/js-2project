@@ -1,5 +1,5 @@
 require(['./config'], ()=>{
-    require(['template', 'url','header','footer'], (template, url, header,footer)=>{
+    require(['template', 'url','header','footer',], (template, url, header,footer,bootstrap)=>{
         class Index{
             constructor(){
                 

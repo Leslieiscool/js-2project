@@ -1,0 +1,16 @@
+@import 'reset.scss';
+@import 'modal/header.scss';
+@import 'modal/footer.scss';
+
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    .header-bottom:hover{
+        background: #191919;
+    }
+}
+main{
+    height: 1000px;
+    background: #aa44ff;
+}

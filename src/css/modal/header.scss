@@ -56,6 +56,7 @@ header{
             }
             &-nav{
                 flex: 1;
+                font-family: Gotham,Verdana,sans-serif;
                 .header-search{
                     float: right;
                     margin-right: 40px;
@@ -64,76 +65,86 @@ header{
                     padding-top: 15px;
                     display: flex;
                     justify-content: space-between;
-                    
                     .test{
                         position: relative;
-                        margin-right: 25px;
+                        margin-right: 15px;
                         .search-box{
-                        width: 300px;
-                        font-family: Gotham,Verdana,sans-serif;
-                        background: #eee;
-                        border-radius: 30px;
-                        display: flex;
-                        justify-content: space-between;
-                        height: 25px;
-                        input{
-                            flex: 1;
-                            height: 22px;
-                            margin: 1px 4px 1px 10px;
-                            border: none;
-                            font: 400 13.3333px Arial;
-                            color: #757575;
-                            background-color: #eee;
-                            outline: none;
-                            padding-left: 10px;
-                        }
-                        button{
-                            margin: 0 10px;
-                            font-size: 20px !important;
-                            height: 25px;
-                            border: none;
-                            padding: 0;
-                            color: #c2c2c2;
-                            background:#eee;
-                            cursor: pointer;
-                        }
-                        .uplist{
-                            width: 100%;
-                            height: 180px;
+                            width: 300px;
+                            font-family: Gotham,Verdana,sans-serif;
                             background: #eee;
-                            position: absolute;
-                            top:26px;
-                            z-index: 100;
-                            display: none;
-                            font-weight: 400;
-                            p{
-                                height: 20px;
-                                margin: 10px 20px;
-                                color: #6e6e6e;
-                                font-size: 18px;
+                            border-radius: 30px;
+                            display: flex;
+                            justify-content: space-between;
+                            height: 25px;
+                            input{
+                                flex: 1;
+                                height: 22px;
+                                margin: 1px 4px 1px 10px;
+                                border: none;
+                                font: 400 13.3333px Arial;
+                                color: #757575;
+                                background-color: #eee;
+                                outline: none;
+                                padding-left: 10px;
                             }
-                            ul{
-                                height: 200px;
-                                li{
-                                    font-size: 16px;
-                                    a{
-                                        color: #757575;
-                                        font-size: 14px;
-                                        display: block;
-                                        height: 25px;
-                                        margin: 10px 20px;
-                                        overflow: hidden;
-                                        white-space: nowrap;
-                                        text-overflow: ellipsis;
-                                    }
-                                    a:hover{
-                                        color: #fff;
+                            button{
+                                margin: 0 10px;
+                                font-size: 20px !important;
+                                height: 25px;
+                                border: none;
+                                padding: 0;
+                                color: #c2c2c2;
+                                background:#eee;
+                                cursor: pointer;
+                            }
+                            .uplist{
+                                width: 100%;
+                                height: 180px;
+                                background: #eee;
+                                position: absolute;
+                                top:26px;
+                                z-index: 100;
+                                display: none;
+                                font-weight: 400;
+                                p{
+                                    height: 20px;
+                                    margin: 10px 20px;
+                                    color: #6e6e6e;
+                                    font-size: 18px;
+                                }
+                                ul{
+                                    height: 200px;
+                                    li{
+                                        font-size: 16px;
+                                        a{
+                                            color: #757575;
+                                            font-size: 14px;
+                                            display: block;
+                                            height: 25px;
+                                            margin: 10px 20px;
+                                            overflow: hidden;
+                                            white-space: nowrap;
+                                            text-overflow: ellipsis;
+                                        }
+                                        a:hover{
+                                            color: #fff;
+                                        }
                                     }
                                 }
                             }
                         }
                     }
-                    
+                    .log-reg{
+                        height: 25px;
+                        display: flex;
+                        a{
+                            display: block;
+                            font-size: 14px;
+                            line-height: 25px;
+                            text-align: center;
+                            color: #fff;
+                            margin-right: 10px;
+                        }
                     }
                     a{
                         color: #fff;
