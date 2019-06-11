@@ -4,6 +4,7 @@
 
 header{
     position: absolute;
+    z-index: 1;
     top: 0;
     left: 0;
     .header-bottom:hover{
@@ -11,6 +12,229 @@ header{
     }
 }
 main{
-    height: 1000px;
-    background: #aa44ff;
+    height: 10000px;
+    width: 100%;
+    font-family: Gotham,Verdana,sans-serif;
+    .banner{
+        width: 100%;
+        height: 640px;
+        background: url('/images/detail.jpeg') no-repeat center;
+        background-size: cover;
+        position: relative;
+        .bn-text{
+            font-family: Gotham,Verdana,sans-serif;
+            position: absolute;
+            width: 40%;
+            bottom: 16%;
+            right: 3%;
+            text-align: center;
+            h2{
+                font-size: 60px;
+                line-height: 64px;
+                letter-spacing: -2px;
+                color: #fff;
+                font-weight: 700;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            .tobuy{
+                display: inline-block;
+                font-size: 14px;
+                font-weight: 700;
+                border: #191919 1px solid;
+                border-radius: 25px;
+                background: #fff;
+                color: #242424;
+                text-align: center;
+                padding: 10px 35px;
+                margin: 10px;
+            }
+            .tobuy:hover{
+                background: #242424;
+                color: #fff;
+            }
+        }
+    }
+    .nav{
+        width: 100%;
+        height: 70px;
+        background-color: rgba(127,127,127,.89);
+        &-box{
+            width: 100%;
+            height: 70px;
+            &-bar{
+                width: 100%;
+                max-width: 1280px;
+                height: 70px;
+                display: flex;
+                align-items: center;
+                li{
+                    height: 70px;
+                    line-height: 70px;
+                    font-size: 16px;
+                    padding: 0 5px;
+                    width: 110px;
+                    max-width: 150px;
+                    text-align: center;
+                    color: #fff;
+                    cursor: pointer;
+                }
+                li:hover{
+                    color: #ccc;
+                }
+                p{
+                    flex: 1;
+                    text-align: right;
+                    a{
+                    color: #595959;
+                    background: #f8f8f8;
+                    border-radius: 35px;
+                    font-size: 13px;
+                    font-weight: 700;
+                    display: inline-block;
+                    width: 160px;
+                    text-align: center;
+                    padding: 17px 0 14px 0;
+                    height: 50px;
+                    margin-right: 3%;
+                    }
+                    a:hover{
+                        background: #191919;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+    .tabs{
+        width: 100%;
+        height: 2000px;
+        // 技术支持
+        .support{
+            width: 100%;
+            background: #f2f2f2;
+            .sup-items{
+                max-width: 1280px;
+                height: auto;
+                margin: 0 auto;
+                display: flex;
+                flex-wrap: wrap;
+                li{
+                    width: 50%;
+                    height: 102px;
+                    padding: 20px 30px;
+                    display: flex;
+                    align-items: center;
+                    .it-logo{
+                        width: 60px;
+                        height: 60px;
+                    }
+                    span{
+                        font-size: 14px;
+                        padding-left: 30px;
+                    }
+                }
+            }
+        }
+        // 介绍
+        .introduce{
+            width: 100%;
+            height: 300px;
+            .itr-text{
+
+                h1{
+                    margin: 3% 11% 20px 11%;
+                    font-size: 60px;
+                    font-weight: 700;
+                    line-height: 64px;
+                    letter-spacing: -2px;
+                    text-align: center;
+                }
+                span{
+                    display: inline-block;
+                    margin: 2% 5%;
+                    font-size: 16px;
+                    color: #666;
+                    text-align: center;
+                }
+            }
+        }
+        .story{
+            width: 100%;
+            height: 700px;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .ad-1{
+            width: 100%;
+            height: 700px;
+            background: url('/images/detail-2.jpeg') no-repeat center;
+            background-size: 100% 700px;
+            overflow: hidden;
+            p{
+                font-size: 48px;
+                font-weight: 700;
+                margin-top: 22%;
+                margin-left: 10%;
+            }
+        }
+        .ad-2{
+            width: 100%;
+            height: 700px;
+            background: url('/images/detail-3.jpeg') no-repeat center;
+            background-size: 100% 700px;
+            color: #fff;
+            .ad-2-text{
+                max-width: 850px;
+                width: 55%;
+                float: right;
+                margin-right: 2%;
+                margin-top: 10%;
+                padding: 40px;
+                h1{
+                    font-size: 60px;
+                    font-weight: 700;
+                    letter-spacing: -2px;
+                    margin-bottom: 10px;
+                }
+                p{
+                    font-size: 16px;
+                }
+                span{
+                    font-size: 12px;
+                    font-weight: 700;
+                    margin: 20px 0;
+                    display: inline-block;
+                }
+            }
+        }
+        .hotspot{
+            width: 100%;
+            
+            max-height: 1280px;
+            .htbox{
+                max-width: 1280px;
+                width: 100%;
+                min-height: 1263px;
+                background: url('/images/hotspot.png') no-repeat center;
+                background-size: 100% 100%;
+            }
+        }
+
+
+
+        // 轮播
+        .swiper-container{
+        width: 100%;
+        min-width: 1263px;
+        height: 710px;
+        }
+        .swiper-slide img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    
 }
