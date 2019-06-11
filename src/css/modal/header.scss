@@ -137,7 +137,8 @@ header{
                     .log-reg{
                         height: 25px;
                         display: flex;
-                        a{
+                        position: relative;
+                        .join{
                             display: block;
                             font-size: 14px;
                             line-height: 25px;
@@ -145,8 +146,26 @@ header{
                             color: #fff;
                             margin-right: 10px;
                         }
+                        .userList{
+                            display: none;
+                            position: absolute;
+                            left: -10px;
+                            top: 30px;
+                            li{
+                                height: 25px;
+                                width: 60px;
+                                line-height: 25px;
+                                font-size: 14px;
+                                color: #fff;
+                                margin-bottom: 5px;
+                                text-align: center;
+                                a{
+                                    color: #fff;
+                                }
+                            }
+                        }
                     }
-                    a{
+                    .store{
                         color: #fff;
                         line-height: 25px;
                         display: block;

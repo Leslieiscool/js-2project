@@ -14,9 +14,17 @@ require(['./config'], ()=>{
             }
             // 把用户名和密码 存到cookie
             saveCk(){
-                let username = $('#username').val();
-                let password = $('#password').val()
+                if($('#username').val() && $('#password').val()){
+                    let username = $('#username').val(),
+                    password = $('#password').val();
                 console.log(username)
+                $.cookie('user', username, {path: '/', expire: '7'});
+                $.cookie('psw', password, {path: '/', expire: '7'});
+                window.location.href = '/index.html';
+                }else{
+                    alert('请输入用户名或密码')
+                }
+                
             }
         }
         new List();

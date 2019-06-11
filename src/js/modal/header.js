@@ -1,5 +1,5 @@
 
-define(['jquery'], ()=>{
+define(['jquery', 'cookie'], ()=>{
     class Header{
         constructor(){
             this.header = $('header'),
@@ -13,7 +13,8 @@ define(['jquery'], ()=>{
                 this.searchBox();
                 this.navBar();
                 this.cancel();
-                this.logReg();
+                this.inputName();
+                
             })
         }
         hdInit(){
@@ -57,9 +58,33 @@ define(['jquery'], ()=>{
                 $('.header-top').hide()
             })
         }
-        //登录和注册弹框
-        logReg(){
+        //渲染用户名
+        inputName(){
+             if($.cookie('user')){
+                 $('.logT').html($.cookie('user')).click((e)=>{
+                    e.preventDefault();
+                });
+                $('.regT').hide();
+                this.userList();
+             }else{
+                $('.logT').html('登录')
+             }
+
+        }
+        //user下拉
+        userList(){
+            $('.log-reg').click(()=>{
+                $('.userList').show();
+                this.out();
+            })
             
+        }
+        //退出
+        out(){
+            $('.out').click(()=>{
+                $('.regT').hide();
+                $.removeCookie('user',{ path: '/'});
+            })
         }
         
     }
