@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/buy.css">
+    <link type="text/css" rel="stylesheet" href="/libs/jquery-plu-etalage/css/etalage.css">
+
+</head>
+<body>
+    <header></header>
+    <main>
+        <div class="choose" id="choose">
+            <script type="text/html" id="buy-template">
+                <ul id="etalage">
+                    {{each list.gdpic photo}}
+                    <li>
+                        <img class="etalage_thumb_image" src="{{photo.pic}}" />
+                        <img class="etalage_source_image" src="{{photo.pic}}" />
+                    </li>
+                    {{/each}}
+                </ul> 
+                <div class="info">
+                    <h1 class="title">{{list.gdtitle}}</h1>
+                    <ul class="color">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <h2>黑色</h2>
+                    <p>建议零售价</p>
+                    <h1 class="price">￥{{list.gdprice}}</h1>
+                    <a href="javascript:;" class="buyit">在线购买</a>
+                    <a href="javascript:;" class="localstore">查找专卖店</a>
+                </div>
+            </script>
+        </div>
+        <!-- parts -->
+        <div class="parts">
+
+        </div>
+    </main>
+    <footer></footer>
+</body>
+<script src="/libs/require/require.min.js" data-main="/js/buy.js"></script>
+<script src="/libs/jquery-plu-etalage/js/jquery.min.js"></script>
+<script src="/libs/jquery-plu-etalage/js/jquery.etalage.min.js"></script>
+
+</html>

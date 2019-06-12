@@ -1,0 +1,92 @@
+@import 'reset.scss';
+@import 'modal/footer.scss';
+@import 'modal/header.scss';
+
+.header-bottom{
+    background: #191919;
+}
+main{
+    height: 1000px;
+    width: 100%;
+    .choose{
+        width: 1280px;
+        overflow: hidden;
+        margin: 0 auto;
+        padding: 30px;
+        display: flex;
+        justify-content: center;
+        .info{
+            height: 555px;
+            width: 555px;
+            margin-left: 60px;
+            float: left;
+            font-family: Gotham,Verdana,sans-serif;
+            .title{
+                font-size: 36px;
+                font-weight: 700;
+                line-height: 44px;
+                text-align: center;
+                padding: 60px 0;
+                color: #000000;
+                border-bottom: 1px dashed #aaddaa;
+            }
+            .color{
+                height: 100px;
+                display: flex;
+                align-items: center;
+                li{
+                    height: 30px;
+                    width: 30px;
+                    margin-right: 10px;
+                }
+                li:nth-child(1){
+                    background: #B9877B;
+                }
+                li:nth-child(2){
+                    background: #bab9b9;
+                }
+                li:nth-child(3){
+                    background: #000000;
+                }
+            }
+            h2{
+                font-size: 20px;
+                padding-bottom: 30px;
+                border-bottom: 1px dashed #aaddaa;
+                margin-bottom: 20px;
+            }
+            .price{
+                font-size: 30px;
+                font-weight: 400;
+            }
+            .buyit{
+                display: block;
+                font-size: 16px;
+                letter-spacing: 2px;
+                padding: 20px 0;
+                width: 430px;
+                background: #000000;
+                color: #ffffff;
+                text-align: center;
+                border-radius: 35px;
+                border: #000000 1px solid;
+                margin-top: 30px;
+                margin-bottom: 10px;
+            }
+            .buyit:hover{
+                background: #ffffff;
+                color: #000000;
+            }
+            .localstore{
+                display: block;
+                width: 430px;
+                text-align: center;
+                color: #B9877B;
+                font-size: 14px;
+            }
+            .localstore:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+}

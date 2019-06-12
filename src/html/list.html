@@ -53,7 +53,7 @@
                     <div class="goodsitem" >
                         <div class="goodsitem-box" id="hot-items">
                             <div class="goodsitem-box-pic" id="hot-pic">
-                                <a href="javascript:;"><img src="/images/good-2.png" alt="pic"></a>
+                                <a href="javascript:;"><img src="{{item.gdpic[0].pic}}" alt="pic"></a>
                             </div>
                             <div class="goodsitem-box-shade" id="hot-shade">
                                 <div class="goodsitem-box-shade-info">
@@ -62,8 +62,8 @@
                                 </div>
                             </div>
                             <div class="goodsitem-box-btn" id="hot-btn">
-                                <a href="javascript:;" class="whitebtn">细节</a>
-                                <a href="javascript:;" class="blackbtn">购买</a>
+                                <a href="/html/detail.html?id={{item.id}}" class="whitebtn">细节</a>
+                                <a href="/html/buy.html?id={{item.id}}" class="blackbtn">购买</a>
                             </div>
                             <div class="goodsitem-box-info">
                                 <a href=""><h2 class="good-title"> {{item.gdtitle}} </h2></a>

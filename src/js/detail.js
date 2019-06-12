@@ -3,6 +3,7 @@ require(['./config'], ()=>{
         class Detail {
             constructor(){
                 this.swiperPt();
+                this.pushId();
             }
 
             swiperPt(){
@@ -24,6 +25,12 @@ require(['./config'], ()=>{
                         prevEl: '.swiper-button-prev',
                       },
                 })
+            }
+
+            pushId(){
+                let id = window.location.search;
+                console.log(id);
+                $('.tobuy').attr('href',`/html/buy.html${id}`);
             }
 
         }

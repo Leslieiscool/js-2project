@@ -29,19 +29,73 @@ define(['jquery', 'cookie'], ()=>{
             this.searchIpt.on('focus',()=>{
                 
                 this.uplist.show();
-                this.form.stop().animate({width:'500px'},500);
+                $('.quicklink').show().children().each(function(){
+                    console.log($(this));
+                    $(this).on('mousedown', function(){
+                        console.log($(this).children());
+                    $('#searchIpt').val($(this).children().html());
+                })
+                });
 
-                $('.item').hide().each(function(index){
-                    $(this).delay(500*(index+1)).fadeIn().on('mouseenter', ()=>{
-                    $(this).css({background:'#ada6a6'})
-                }).on('mouseleave', ()=>{
-                    $(this).css({background:''})
+                this.form.stop().animate({width:'500px'},500);
+                $('.lkitem').hide().each(function(index){
+                    $(this).delay(400*(index+1)).fadeIn()
                 })
+
+                this.searchIpt.on('keyup', ()=>{
+                    if($('#searchIpt').val()){
+                        $('.quicklink').hide()
+                    }else{
+                        $('.quicklink').show()
+                    };
+                    
+                    let keyword = $('#searchIpt').val();
+                    //相关搜索
+                    console.log(keyword);
+                    // this.relate(keyword);
+                    $.getJSON(`https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=${keyword}&cb=?`,  res=>{
+                        console.log(res);
+                        $('.relate').html('');
+                        let kd = res.s;
+                        kd.forEach(function(item){
+                            $('<li>').html(item).appendTo($('.relate')).mousedown(()=>{
+                                $('#searchIpt').val('');
+                                $('#searchIpt').val(item)
+                            })
+                        })
+                    })
                 })
+
             }).on('blur', ()=>{
                 this.form.animate({width:this.width},500);
                 this.uplist.hide();
+                $('.relate').html('');
             })
+            // .on('keyup', ()=>{
+            //     if($('#searchIpt').val()){
+            //         $('.quicklink').hide()
+            //     }else{
+            //         $('.quicklink').show()
+            //     };
+                
+            //     let keyword = $('#searchIpt').val();
+            //     //相关搜索
+            //     console.log(keyword);
+            //     // this.relate(keyword);
+            //     $.getJSON(`https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=${keyword}&cb=?`,  res=>{
+            //     console.log(res);
+            //     $('.relate').html('');
+            //     let kd = res.s;
+            //     kd.forEach(function(item){
+            //         $('<li>').html(item).appendTo($('.relate')).click((item)=>{
+            //             $('#searchIpt').val('');
+            //             $('#searchIpt').val(item)
+            //         });
+
+            //     })
+            // })
+            // })
+            
         }
         // navbar 下拉框
         navBar(){
@@ -86,6 +140,7 @@ define(['jquery', 'cookie'], ()=>{
                 $.removeCookie('user',{ path: '/'});
             })
         }
+        
         
     }
     return new Header();
