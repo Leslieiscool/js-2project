@@ -65,7 +65,6 @@ define(['jquery', 'cookie'], ()=>{
                         })
                     })
                 })
-
             }).on('blur', ()=>{
                 this.form.animate({width:this.width},500);
                 this.uplist.hide();

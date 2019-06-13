@@ -60,22 +60,26 @@ main{
                 font-weight: 400;
             }
             .buyit{
-                display: block;
+                display: inline-block;
                 font-size: 16px;
                 letter-spacing: 2px;
                 padding: 20px 0;
-                width: 430px;
+                width: 215px;
                 background: #000000;
                 color: #ffffff;
                 text-align: center;
                 border-radius: 35px;
                 border: #000000 1px solid;
                 margin-top: 30px;
-                margin-bottom: 10px;
+                margin-bottom: 17px;
             }
             .buyit:hover{
                 background: #ffffff;
                 color: #000000;
+                
+            }
+            .pay{
+                @extend .buyit;
             }
             .localstore{
                 display: block;
