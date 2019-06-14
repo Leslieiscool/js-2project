@@ -16,7 +16,7 @@
             <ul class="gdstype">
                 <li><input type="checkbox" class="allck">全选</li>
                 <li>商品信息</li>
-                <li>单价</li>
+                <li>单价（元）</li>
                 <li>数量（件）</li>
                 <li>小计(元)</li>
                 <li>操作</li>
@@ -47,9 +47,9 @@
                                 <p class="title">{{item.gdtitle}}</p>
                             </li>
                             <li class="price">{{item.gdprice}}</li>
-                            <li class="number">{{item.num}}</li>
+                            <li class="number"><span id="cutnum">&laquo;</span><span id="itemnum">{{item.num}}</span><span id="addnum">&raquo;</span></li>
                             <li class="sgtl">小计</li>
-                            <li class="delete"><p>删除</p></li>
+                            <li class="delete"><a href="javascript:;" title="delete" class="lidelete">删除</a></li>
                         </ul>
                     {{/each}}
                 </script>

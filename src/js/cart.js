@@ -3,13 +3,23 @@ require(['./config'], ()=>{
         class Cart{
             constructor(){
                 this.n =0;
-                this.iptcheck();
                 this.getgd();
+                this.iptcheck();
+            }
+
+            //从storage里取数据并渲染购物车
+            getgd(){
+                let goodifo = JSON.parse(localStorage.getItem('cart'));
+                // console.log(goodifo);
+                let html = template('cart-template', {
+                    list : goodifo,
+                });
+                $('#gdlist').html(html);
+                this.deletegd();
             }
 
             //全选按钮
             iptcheck(){
-                console.log(this.n);
                 $('.allck').on('change', ()=>{
                     // console.log($('.allck').is(':checked'));
                     // console.log($('.check'));
@@ -19,17 +29,14 @@ require(['./config'], ()=>{
                     });
                     // console.log($('.check').length);
                     this.n = $('.allck').is(':checked') ? $('.check').length : 0 ;
-                    console.log(this.n);
                     // this.checks($n);
                 });
                 this.checks();
             }
             //单选按钮
             checks(){
-                // console.log(n);
                 $('.check').each((index, item)=>{
                     $(item).on('change',()=>{
-                        // console.log(n);
                         this.n += $(item).is(':checked') ? 1 : -1;
                         console.log(this.n);
                         // console.log($('.check').length);
@@ -44,17 +51,25 @@ require(['./config'], ()=>{
                     
                 });
             }
-            //从storage里取数据并渲染购物车
-            getgd(){
-                console.log(1);
-                let goodifo = JSON.parse(localStorage.getItem('cart'));
-                console.log(goodifo);
-                let html = template('cart-template', {
-                    list : goodifo,
-                });
-                $('#gdlist').html(html);
+            //删除商品
+            deletegd(){
+                
+                    $('.lidelete').each((index, item)=>{
+                        console.log($('.delete'));
+                    $(item).on('click', ()=>{
+                        console.log(index);
+                        let cartlist = JSON.parse(localStorage.getItem('cart'));
+                        cartlist.splice(index, 1);
+                        console.log(cartlist);
+                        localStorage.setItem('cart', JSON.stringify(cartlist));
+                        this.getgd();
+                        header.cartnum();
+                        })
+                        
+                    })
+                
             }
-
+                
 
         }
         new Cart();

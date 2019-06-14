@@ -66,10 +66,15 @@ require(['./config'], ()=>{
                             // console.log(cartlist[i].num);
                             //有这条数据 加数量
                             cartlist[i].num = cartlist[i].num+1 ;
-                            this.buyIfo.num = this.buyIfo.num+1 ;
                             
+                            this.buyIfo.num = this.buyIfo.num+1 ;
+                            // $('#gdnum').html(cartlist[i].num);
                         }else{
                             //没有这条数据 存入这条数据
+                            this.buyIfo = {
+                                ...this.buyIfo,
+                                num : 1 
+                            };
                             cartlist.push(this.buyIfo);
                         }
                         localStorage.setItem('cart', JSON.stringify(cartlist));
@@ -84,10 +89,11 @@ require(['./config'], ()=>{
                         localStorage.setItem('cart', JSON.stringify([this.buyIfo]))
                     }
 
-                    // console.log(i);
+                    
                     //fly
                     let _this = this;
-                    // console.log(cartlistnum);
+                    
+                    console.log(this.buyIfo.num)
                     // 抛物线
                     $(`<img src="${this.buyIfo.gdpic[0].pic}" style="width:20px;height:30px">`)
                     .fly({
@@ -101,15 +107,15 @@ require(['./config'], ()=>{
                         this.destroy()
                         // let num = Number(this.buyIfo.num)
                         // num ++;
-                        // console.log(this.buyIfo.num)
-                        $("#gdnum").html(5)
+                        
                         
                         } //结束回调
                     })
+
+                    // window.location.reload();
+                    header.cartnum();
                 })
             }
-
-            
             
         }
         new Buy();

@@ -14,6 +14,7 @@ define(['jquery', 'cookie'], ()=>{
                 this.navBar();
                 this.cancel();
                 this.inputName();
+                this.cartnum();
                 
             })
         }
@@ -70,30 +71,6 @@ define(['jquery', 'cookie'], ()=>{
                 this.uplist.hide();
                 $('.relate').html('');
             })
-            // .on('keyup', ()=>{
-            //     if($('#searchIpt').val()){
-            //         $('.quicklink').hide()
-            //     }else{
-            //         $('.quicklink').show()
-            //     };
-                
-            //     let keyword = $('#searchIpt').val();
-            //     //相关搜索
-            //     console.log(keyword);
-            //     // this.relate(keyword);
-            //     $.getJSON(`https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=${keyword}&cb=?`,  res=>{
-            //     console.log(res);
-            //     $('.relate').html('');
-            //     let kd = res.s;
-            //     kd.forEach(function(item){
-            //         $('<li>').html(item).appendTo($('.relate')).click((item)=>{
-            //             $('#searchIpt').val('');
-            //             $('#searchIpt').val(item)
-            //         });
-
-            //     })
-            // })
-            // })
             
         }
         // navbar 下拉框
@@ -138,6 +115,23 @@ define(['jquery', 'cookie'], ()=>{
                 $('.regT').hide();
                 $.removeCookie('user',{ path: '/'});
             })
+        }
+        //渲染购物车数量
+        cartnum(){
+            let n = 0;
+            // console.log(22);
+            let cartlist = JSON.parse(localStorage.getItem('cart'));
+            // console.log(cartlist);
+            if(cartlist){
+                cartlist.forEach((item)=>{
+                // console.log(item.num);
+
+                n += item.num;
+                // console.log(n);
+            })
+            $('#gdnum').html(n);
+            }
+            
         }
         
         
