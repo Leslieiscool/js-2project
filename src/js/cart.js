@@ -9,7 +9,7 @@ require(['./config'], ()=>{
 
             //从storage里取数据并渲染购物车
             getgd(){
-                let goodifo = JSON.parse(localStorage.getItem('cart'));
+                let cartlist = JSON.parse(localStorage.getItem('cart'));
                 // console.log(goodifo);
                 let html = template('cart-template', {
                     list : goodifo,
@@ -63,7 +63,6 @@ require(['./config'], ()=>{
                 $('#gdlist').on('click', '.lidelete', function(){
                     let cartlist = JSON.parse(localStorage.getItem('cart'));
                     // console.log($(this).attr('id'));
-                    
                     cartlist.forEach((item, index)=>{
                         if(item.id == $(this).attr('id')){
                             cartlist.splice(index, 1);
@@ -83,28 +82,10 @@ require(['./config'], ()=>{
                         $('.allck').prop('checked', false);
                     }
                 })
-
-
-                    // $('.lidelete').each((index, item)=>{
-                    //     // console.log($('.delete'));
-                    // $(item).on('click', ()=>{
-                    //     // console.log(index);
-                    //     let cartlist = JSON.parse(localStorage.getItem('cart'));
-                    //     cartlist.splice(index, 1);
-                    //     // console.log(cartlist);
-                    //     localStorage.setItem('cart', JSON.stringify(cartlist));
-                    //     if($(item).is(':checked')){
-                    //         this.n --;
-                    //     };
-                    //     console.log(3);
-                    //     console.log(this.n);
-                    //     this.getgd();
-                    //     
-                    //     })
-                    // })
-                
             }
-                
+            
+            //总计计算
+
 
         }
         new Cart();

@@ -48,7 +48,7 @@
                             </li>
                             <li class="price">{{item.gdprice}}</li>
                             <li class="number"><span id="cutnum">&laquo;</span><span id="itemnum">{{item.num}}</span><span id="addnum">&raquo;</span></li>
-                            <li class="sgtl">小计</li>
+                            <li class="sgtl">{{item.gdprice*item.num}}</li>
                             <li class="delete"><a href="javascript:;" title="delete" class="lidelete" id="{{item.id}}">删除</a></li>
                         </ul>
                     {{/each}}
@@ -56,7 +56,7 @@
             
             <div class="ltbt">
                 <h4>总计 ￥</h4>
-                <p id="total">2300.00</p>
+                <p id="total">0</p>
                 <a href="javascript:;" class="payfor">结算</a>
             </div>
         </div>
