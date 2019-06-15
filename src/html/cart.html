@@ -14,7 +14,7 @@
     <main>
         <div class="choosegoods">
             <ul class="gdstype">
-                <li><input type="checkbox" class="allck">全选</li>
+                <li><input type="checkbox" class="allck" checked="true">全选</li>
                 <li>商品信息</li>
                 <li>单价（元）</li>
                 <li>数量（件）</li>
@@ -39,7 +39,7 @@
                 <script type="text/html" id="cart-template">
                     {{each list item}}
                         <ul class="eygoods">
-                            <li><input type="checkbox" class="check"></li>
+                            <li><input type="checkbox" class="check" checked="true"></li>
                             <li class="gdinfo">
                                 <div class="pic">
                                     <img src="{{item.gdpic[0].pic}}" alt="">
@@ -47,7 +47,7 @@
                                 <p class="title">{{item.gdtitle}}</p>
                             </li>
                             <li class="price">{{item.gdprice}}</li>
-                            <li class="number"><span id="cutnum">&laquo;</span><span id="itemnum">{{item.num}}</span><span id="addnum">&raquo;</span></li>
+                            <li class="number"><span id="cutnum">&laquo;</span><span id="itnum">{{item.num}}</span><span id="addnum">&raquo;</span></li>
                             <li class="sgtl">{{item.gdprice*item.num}}</li>
                             <li class="delete"><a href="javascript:;" title="delete" class="lidelete" id="{{item.id}}">删除</a></li>
                         </ul>
